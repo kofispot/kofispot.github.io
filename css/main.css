@@ -1,4 +1,4 @@
-/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+ /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html {
   box-sizing: border-box
 }
@@ -17,7 +17,7 @@ body {
   margin: 0
 }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+aside, details, figcaption, figure, footer, header, main, menu, nav, section {
   display: block
 }
 
@@ -93,7 +93,7 @@ figure {
 }
 
 img {
-  border-style: none
+  border-style: none;
 }
 
 code, kbd, pre, samp {
@@ -107,7 +107,7 @@ hr {
   overflow: visible
 }
 
-button, input, select, textarea, optgroup {
+button, select, textarea, optgroup {
   font: inherit;
   margin: 0
 }
@@ -116,7 +116,7 @@ optgroup {
   font-weight: bold
 }
 
-button, input {
+button {
   overflow: visible
 }
 
@@ -249,10 +249,6 @@ hr {
   height: auto
 }
 
-img {
-  vertical-align: middle
-}
-
 a {
   color: inherit
 }
@@ -372,7 +368,7 @@ a {
 }
 
 .w3-tooltip, .w3-display-container {
-  position: relative
+  position: relative;
 }
 
 .w3-tooltip .w3-text {
@@ -395,7 +391,7 @@ a {
   padding: 8px;
   display: block;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #e10f0f;
   width: 100%
 }
 
@@ -991,7 +987,7 @@ a {
 }
 
 .w3-code, .w3-codespan {
-  font-family: Consolas, "courier new";
+  font-family: Consolas, "courier new", serif;
   font-size: 16px
 }
 
@@ -1171,7 +1167,7 @@ a {
 }
 
 .w3-greyscale-min, .w3-grayscale-min {
-  filter: grayscale(50%)
+  filter: grayscale(20%)
 }
 
 .w3-sepia {
@@ -1239,7 +1235,7 @@ a {
 }
 
 .w3-border {
-  border: 1px solid #ccc !important
+  border: 1px solid rgba(255, 159, 17, 0.78) !important
 }
 
 .w3-border-top {
@@ -1488,6 +1484,9 @@ a {
 .w3-black, .w3-hover-black:hover {
   color: #fff !important;
   background-color: #000 !important
+}
+.yellow {
+  color: #ffd42a;
 }
 
 .w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover {
