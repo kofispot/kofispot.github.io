@@ -1143,7 +1143,7 @@ a {
 }
 
 .w3-opacity, .w3-hover-opacity:hover {
-  opacity: 0.6
+  opacity: 0;
 }
 
 .w3-opacity-off, .w3-hover-opacity-off:hover {
