@@ -3,7 +3,7 @@
 $num-of-slide: 3;
 .wrapper {
   max-width: 100%;
-  margin: 0;
+  margin: 1em auto;
   position: relative;
 }
 
@@ -13,7 +13,6 @@ input {
 
 .inner {
   width: percentage($num-of-slide);
-  line-height: 0;
   height: 50%;
 }
 
@@ -42,7 +41,6 @@ article {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #fff;
     opacity: 0.7;
 
     &:hover {
@@ -64,11 +62,10 @@ article {
     width: 10px;
     height: 10px;
     background: #bbb;
-    transition: all 0.3s;
+    transition: all 0.6s;
 
     &:hover {
-      background: #ccc;
-      border-color: #777;
+      background: khaki;
     }
   }
 }
@@ -76,8 +73,6 @@ article {
 /* Info Box */
 .info {
   position: absolute;
-  font-style: italic;
-  line-height: 20px;
   opacity: 0;
   color: #000;
   text-align: left;
@@ -116,7 +111,6 @@ article {
 .slider-wrapper {
   width: 100%;
   overflow: hidden;
-  border-radius: 5px;
   box-shadow: 1px 1px 4px #666;
   background: #fcfff4;
   transform: translateZ(0);
@@ -142,7 +136,10 @@ article {
   line-height: 38px;
   font-size: 3em;
   display: block;
-  color: #777;
+  color: #BBB;
+  &:hover {
+    color: khaki;
+  }
 }
 
 %bind-next-button {

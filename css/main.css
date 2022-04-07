@@ -17,7 +17,7 @@ body {
   margin: 0
 }
 
-aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+ article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
   display: block
 }
 
@@ -904,7 +904,7 @@ a {
 .w3-display-left {
   position: absolute;
   top: 50%;
-  left: 0%;
+  left: 0;
   transform: translate(0%, -50%);
   -ms-transform: translate(-0%, -50%)
 }
@@ -912,7 +912,7 @@ a {
 .w3-display-right {
   position: absolute;
   top: 50%;
-  right: 0%;
+  right: 0;
   transform: translate(0%, -50%);
   -ms-transform: translate(0%, -50%)
 }
