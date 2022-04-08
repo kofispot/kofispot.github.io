@@ -20,8 +20,21 @@ article {
   display: block;
 }
 article img {
+  min-width: 1024px;
+  min-height: 1920px;
+  /* Set up proportionate scaling */
   width: 100%;
-  min-height: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  article img {
+    /* Specific to this particular image */
+  }
+  article img img.bg {
+    left: 50%;
+    margin-left: -512px;
+    /* 50% */
+  }
 }
 
 /*---- SET UP CONTROL ----*/
