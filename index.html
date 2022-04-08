@@ -49,9 +49,9 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="top-bar-container">
+<div class="top-bar-container" id="top-bar">
   <div class="top-bar w3-white card-view" id="myNavbar">
-    <a href="#home" class="bar-item button-style w3-wide">LOGO</a>
+    <a href="#home-sliders" class="bar-item button-style w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="right-alignment hide-on-small-screens">
       <a href="#about" class="bar-item button-style">ABOUT</a>
@@ -84,7 +84,7 @@
 </nav>
 
 <!-- Header with full-height image -->
-<div class="wrapper w3-grayscale-min" id="home">
+<header class="wrapper w3-grayscale-min" id="home-sliders">
   <input checked type=radio name="slider" id="slide1"/>
   <input type=radio name="slider" id="slide2"/>
   <input type=radio name="slider" id="slide3"/>
@@ -146,7 +146,7 @@
     <label for=slide3></label>
   </div>
 
-</div>
+</header>
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT THE COMPANY</h3>
@@ -440,7 +440,7 @@
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="button-style w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#home-sliders" class="button-style w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -456,6 +456,11 @@
 </footer>
 
 <script>
+  // correct margin
+  const clientHeight = document.getElementById('top-bar').clientHeight;
+  console.log("height is " + clientHeight)
+  document.getElementById("home-sliders").style.marginTop = clientHeight + "px"
+
   // Modal Image Gallery
   function onClick(element) {
     document.getElementById("img01").src = element.src;
