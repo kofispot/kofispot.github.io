@@ -21,20 +21,6 @@ article {
   float: left;
   position: relative;
   display: block;
-
-  img {
-    min-width: 1024px;
-    min-height: 1920px;
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-    @media screen and (max-width: 1024px) { /* Specific to this particular image */
-      img.bg {
-        left: 50%;
-        margin-left: -512px; /* 50% */
-      }
-    }
-  }
 }
 
 /*---- SET UP CONTROL ----*/
@@ -91,9 +77,9 @@ article {
   opacity: 0;
   color: #000;
   text-align: left;
-  -webkit-transition: all 1000ms ease-out 600ms;
-  -moz-transition: all 1000ms ease-out 600ms;
-  transition: all 1000ms ease-out 600ms;
+  -webkit-transition: all 12000ms ease-out 600ms;
+  -moz-transition: all 12000ms ease-out 600ms;
+  transition: all 1200ms ease-out 600ms;
 }
 
 .info h3 {
