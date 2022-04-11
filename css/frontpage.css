@@ -219,9 +219,10 @@ article {
     opacity: 0;
   }
 }
-@media (hover: none) {
+@media (hover: hover) {
   .button-style:hover {
-    background: none;
+    color: #000 !important;
+    background-color: #c91717 !important;
   }
 }
 

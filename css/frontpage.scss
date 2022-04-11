@@ -277,8 +277,9 @@ article {
   }
 }
 
-@media (hover:none) {
-  .button-style:hover{
-        background: none;
-    }
+@media (hover:hover) {
+  .button-style:hover {
+    color: #000 !important;
+    background-color: #c91717 !important
+  }
 }
