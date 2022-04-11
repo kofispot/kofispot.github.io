@@ -1143,7 +1143,7 @@ a {
   width: 100% !important
 }
 
-.w3-opacity {
+.w3-opacity, .w3-hover-opacity:hover {
   opacity: 0.73;
 }
 
@@ -1357,12 +1357,10 @@ a {
   float: right !important
 }
 
-/*
 .button-style:hover {
   color: #000 !important;
   background-color: #ccc !important
 }
-*/
 
 .w3-transparent, .w3-hover-none:hover {
   background-color: transparent !important
