@@ -278,7 +278,7 @@ article {
 }
 
 @media (hover:hover) {
-  .button-style:hover {
+  button:hover {
     color: #000 !important;
     background-color: #c91717 !important
   }
