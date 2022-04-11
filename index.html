@@ -77,14 +77,14 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="sidebar w3-bar-block w3-black card-view hide-on-medium-screens hide-on-large-screens"
      id="mySidebar">
-  <a href="#home-sliders" onclick="w3_close()" class="bar-item button-style large-font-size padding-16">
+  <a href="#home-sliders" onclick="close_slider()" class="bar-item button-style large-font-size padding-16">
     Home
   </a>
-  <a href="#about" onclick="w3_close()" class="bar-item button-style ">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="bar-item button-style">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="bar-item button-style">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="bar-item button-style">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="bar-item button-style">CONTACT</a>
+  <a href="#about" onclick="close_slider()" class="bar-item button-style ">ABOUT</a>
+  <a href="#team" onclick="close_slider()" class="bar-item button-style">TEAM</a>
+  <a href="#work" onclick="close_slider()" class="bar-item button-style">WORK</a>
+  <a href="#pricing" onclick="close_slider()" class="bar-item button-style">PRICING</a>
+  <a href="#contact" onclick="close_slider()" class="bar-item button-style">CONTACT</a>
 </nav>
 
 <div id="body">
@@ -124,7 +124,7 @@
             <span
               class="xxlarge-font-size hide-on-large-screens hide-on-medium-screens">
             Integrating Rust With Android Development</span><br>
-            <span class="large-font-size">Learn How To Add Rust To Your Android App!</span>
+            <span class="large-font-size">Learn How To Add <strong>Rust</strong> To Your Android App!</span>
           </div>
 
           <div class="info bottom-right w3-text-grey large-font-size" style="padding:24px 48px">
@@ -492,27 +492,24 @@
   let sliderIsOpened = false
 
   function w3_open() {
-    if (sliderIsOpened) {
-      //close
-      w3_close()
-    } else {
-      //mySidebar.classList.add("animate-to-left")
+
+    if (sliderIsOpened) close_slider() //close
+    else {
       $(".sidebar").toggleClass("active");
       sliderIsOpened = true
     }
   }
 
   // Close the sidebar with the close button
-  function w3_close() {
+  function close_slider() {
     if (sliderIsOpened) {
-      //mySidebar.classList.remove("animate-to-left")
       $(".sidebar").toggleClass("active");
       sliderIsOpened = false
     }
   }
 
   // close sidebar when you tap anywhere outside it
-  document.getElementById("body").addEventListener('click', w3_close)
+  document.getElementById("body").addEventListener('click', close_slider)
 
 </script>
 
