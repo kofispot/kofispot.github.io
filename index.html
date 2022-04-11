@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/frontpage.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <script src="https://kit.fontawesome.com/013a420541.js" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+          src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
   <style>
     body, h1, h2, h3, h4, h5, h6 {
       font-family: "Raleway", sans-serif
@@ -72,8 +75,8 @@
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="sidebar w3-bar-block w3-black card-view animate-to-left hide-on-medium-screens hide-on-large-screens"
-     style="display:none" id="mySidebar">
+<nav class="sidebar w3-bar-block w3-black card-view hide-on-medium-screens hide-on-large-screens"
+     id="mySidebar">
   <a href="#home-sliders" onclick="w3_close()" class="bar-item button-style large-font-size padding-16">
     Home
   </a>
@@ -483,26 +486,32 @@
     captionText.innerHTML = element.alt;
   }
 
-
   // Toggle between showing and hiding the sidebar when clicking the menu icon
   const mySidebar = document.getElementById("mySidebar");
 
+  let sliderIsOpened = false
+
   function w3_open() {
-    if (mySidebar.style.display === 'block') {
-      mySidebar.style.display = 'none';
+    if (sliderIsOpened) {
+      //close
+      w3_close()
     } else {
-      mySidebar.style.display = 'block';
+      //mySidebar.classList.add("animate-to-left")
+      $(".sidebar").toggleClass("active");
+      sliderIsOpened = true
     }
   }
 
   // Close the sidebar with the close button
   function w3_close() {
-    if (mySidebar.style.display === "block")
-      mySidebar.style.display = "none";
+    if (sliderIsOpened) {
+      //mySidebar.classList.remove("animate-to-left")
+      $(".sidebar").toggleClass("active");
+      sliderIsOpened = false
+    }
   }
 
   // close sidebar when you tap anywhere outside it
-
   document.getElementById("body").addEventListener('click', w3_close)
 
 </script>
