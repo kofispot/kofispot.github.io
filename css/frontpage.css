@@ -224,6 +224,10 @@ article {
     color: #000 !important;
     background-color: #ccc !important;
   }
+
+  .w3-hover-opacity:hover {
+    opacity: 0.73;
+  }
 }
 
 /*# sourceMappingURL=frontpage.css.map */
