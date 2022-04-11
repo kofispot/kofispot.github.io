@@ -307,7 +307,6 @@ a {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  background-color: inherit;
   text-align: center;
   cursor: pointer;
   white-space: nowrap
@@ -1359,6 +1358,7 @@ a {
 
 .button-style:hover {
   color: #000 !important;
+  background-color: #ccc !important
 }
 
 .w3-transparent, .w3-hover-none:hover {
