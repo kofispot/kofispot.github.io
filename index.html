@@ -492,10 +492,9 @@
   let sliderIsOpened = false
 
   function w3_open() {
-
     if (sliderIsOpened) close_slider() //close
     else {
-      $(".sidebar").toggleClass("active");
+      mySidebar.classList.add("active")
       sliderIsOpened = true
     }
   }
@@ -503,7 +502,7 @@
   // Close the sidebar with the close button
   function close_slider() {
     if (sliderIsOpened) {
-      $(".sidebar").toggleClass("active");
+      mySidebar.classList.remove("active")
       sliderIsOpened = false
     }
   }
