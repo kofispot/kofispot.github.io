@@ -89,6 +89,12 @@ article {
   background-color: lightgray;
 }
 
+.header-text-background {
+  background-color: lightgray;
+  padding: 48px;
+  width: 100%;
+}
+
 .info.top-right {
   top: 30px;
   right: 30px;
