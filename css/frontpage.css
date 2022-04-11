@@ -219,5 +219,10 @@ article {
     opacity: 0;
   }
 }
+@media (hover: none) {
+  .button-style:hover {
+    background: none;
+  }
+}
 
 /*# sourceMappingURL=frontpage.css.map */
