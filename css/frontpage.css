@@ -222,7 +222,7 @@ article {
 @media (hover: hover) {
   button:hover {
     color: #000 !important;
-    background-color: #c91717 !important;
+    background-color: #ccc !important;
   }
 }
 
