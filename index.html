@@ -161,6 +161,53 @@
       <label for=slide3></label>
     </div>
 
+    <script>
+      //Enable swipe
+      const container = document.querySelector(".wrapper")
+      const N = 3
+      let initX
+      let i = 1;
+
+      function lock(event) {
+        initX = unify(event).clientX
+        console.log("N" + N)
+      }
+
+      function move(event) {
+
+        if (initX || initX === 0) {
+          let dx = unify(event).clientX - initX
+          let s = Math.sign(dx)
+
+          if ((i > 0 || s < 0) && (i <= N || s > 0)) {
+            i -= s
+            if (i === 0) {
+              //move to the last one
+              i = N
+            } else if (i > N) {
+              // move to start
+              i = 1
+            }
+            const checked = "slide" + i
+            console.log("checked " + checked + " " + i + " " + s)
+            document.getElementById(checked).checked = true;
+          }
+          initX = null
+        }
+      }
+
+
+      container.addEventListener('mousedown', lock, false);
+      container.addEventListener('touchstart', lock, false);
+
+      container.addEventListener('mouseup', move, false);
+      container.addEventListener('touchend', move, false);
+
+      function unify(e) {
+        return e.changedTouches ? e.changedTouches[0] : e
+      }
+
+    </script>
   </div>
   <!-- About Section -->
   <div class="w3-container" style="padding:128px 16px" id="about">
@@ -507,7 +554,7 @@
     }
   }
 
-  // close sidebar when you tap anywhere outside it
+  // close sidebar when you tap here outside it
   document.getElementById("body").addEventListener('click', close_slider)
 
 </script>
