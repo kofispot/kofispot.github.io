@@ -180,6 +180,7 @@
           let s = Math.sign(dx)
 
           if ((i > 0 || s < 0) && (i <= N || s > 0)) {
+            console.log("initaila i " + i)
             i -= s
             if (i === 0) {
               //move to the last one
@@ -189,14 +190,25 @@
               i = 1
             }
             const checked = "slide" + i
-            console.log("checked " + checked + " " + i + " " + s)
+            console.log("checked " + checked + " i" + i + " s" + s)
             document.getElementById(checked).checked = true;
           }
           initX = null
         }
       }
 
+      // update i when the buttons are clicked
+      const radioButtons = document.getElementsByName("slider")
+      for (let j = 0; j < radioButtons.length; j++) {
+        radioButtons[j].onclick = function () {
+          i =  this.id.slice(-1)
+          console.log("iis "+ i)
+        }
+      }
 
+      container.addEventListener('touchmove', e => {
+        e.preventDefault()
+      }, false)
       container.addEventListener('mousedown', lock, false);
       container.addEventListener('touchstart', lock, false);
 
