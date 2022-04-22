@@ -181,6 +181,11 @@
 
         if (initX || initX === 0) {
           let dx = unify(event).clientX - initX
+          if (Math.abs(dx) < 5) {
+            initX = null
+            return
+          }
+          console.log("distan "+dx)
           let s = Math.sign(dx)
 
           if ((i > 0 || s < 0) && (i <= N || s > 0)) {
