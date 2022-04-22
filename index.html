@@ -162,9 +162,13 @@
     </div>
 
     <script>
+      /*TODO move picture according to swipe
+      https://css-tricks.com/simple-swipe-with-vanilla-javascript/#aa-better-visual-cues-while-dragging
+      */
       //Enable swipe
       const container = document.querySelector(".wrapper")
       const N = 3
+      const slideDuration = 5500
       let initX
       let i = 1;
 
@@ -191,18 +195,21 @@
             }
             const checked = "slide" + i
             console.log("checked " + checked + " i" + i + " s" + s)
-            document.getElementById(checked).checked = true;
+            checkSlider(i)
           }
           initX = null
         }
       }
 
+      let nInterval;
       // update i when the buttons are clicked
       const radioButtons = document.getElementsByName("slider")
       for (let j = 0; j < radioButtons.length; j++) {
         radioButtons[j].onclick = function () {
-          i =  this.id.slice(-1)
-          console.log("iis "+ i)
+          i = parseInt(this.id.slice(-1))
+          console.log("iis " + i)
+          // reset interval
+          resetInterval()
         }
       }
 
@@ -218,6 +225,31 @@
       function unify(e) {
         return e.changedTouches ? e.changedTouches[0] : e
       }
+
+      function checkSlider(num) {
+        const checked = "slide" + num
+        console.log("cehckld " + checked)
+        document.getElementById(checked).checked = true;
+        resetInterval()
+      }
+
+      // Move sliders every 7 seconds
+      function moveSlider() {
+        //i have the most current button
+        if (i >= N) {
+          i = 1
+        } else {
+          i += 1
+        }
+        checkSlider(i)
+      }
+
+      function resetInterval() {
+        clearInterval(nInterval)
+        nInterval = setInterval(moveSlider, slideDuration)
+      }
+
+      resetInterval()
 
     </script>
   </div>
