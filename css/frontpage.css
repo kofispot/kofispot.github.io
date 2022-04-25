@@ -8,6 +8,10 @@ input {
   display: none;
 }
 
+.body-background {
+  background-color: #FAECE1;
+}
+
 .inner {
   width: 300%;
   height: 50%;

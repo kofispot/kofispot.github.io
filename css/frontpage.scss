@@ -10,6 +10,10 @@ input {
   display: none;
 }
 
+.body-background {
+  background-color: #FAECE1;
+}
+
 .inner {
   width: percentage($num-of-slide);
   height: 50%;
